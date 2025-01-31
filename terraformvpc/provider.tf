@@ -6,6 +6,13 @@ terraform {
     }
   }
 }
+terraform {
+  backend "s3" {
+    bucket = "terraform-remote-backend-s3"
+    key    = "dev/terraform.tfstate"
+    region = "global"
+  }
+}
 
 # Configure the AWS Provider
 provider "aws" {
