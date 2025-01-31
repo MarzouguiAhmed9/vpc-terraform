@@ -9,5 +9,6 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
+  profile = "awsstudent"
   region = "global"
 }
